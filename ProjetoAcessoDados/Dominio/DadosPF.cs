@@ -15,6 +15,7 @@ namespace ProjetoAcessoDados.Dominio
         public string RG { get; private set; }
         public string NomeMae { get; private set; }
         public string NomePai { get; private set; }
+        public Byte[] Foto { get; private set; }
         public virtual EstadoCivil EstadoCivil { get; private set; }
 
         protected DadosPF() { }
@@ -46,6 +47,11 @@ namespace ProjetoAcessoDados.Dominio
             Check("Sexo", sexo)
                 .IsNotNull();
             this.Sexo = sexo;
+        }
+
+        public void SetFoto(Byte[] foto)
+        {
+            Foto = foto;
         }
 
         public void SetDataNascimento(DateTime dataNascimento)

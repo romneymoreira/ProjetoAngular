@@ -18,7 +18,12 @@ namespace ProjetoAcessoDados.Mapping
                 .IsRequired();
 
             this.Property(p => p.NomeMae)
-                .HasMaxLength(60);
+                .HasMaxLength(200);
+
+            this.Property(p => p.NomePai)
+               .HasMaxLength(200);
+
+            this.Property(p => p.Foto);
 
             this.HasOptional(p => p.EstadoCivil)
                 .WithMany()
